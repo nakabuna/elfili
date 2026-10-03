@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { characters, slugOf } from "./data";
 import Reveal from "./Reveal";
+import Portrait from "./Portrait";
 
 type C = (typeof characters)[number];
 
@@ -16,8 +17,9 @@ export default function CharacterProfile({ character, others }: { character: C; 
       <div className="mt-10 grid items-start gap-10 md:grid-cols-2">
         <div className="md:sticky md:top-10">
           <Reveal>
-            <div className="aspect-[3/4] overflow-hidden rounded-[32px] border border-white/10 bg-neutral-950 bg-cover bg-center"
-              style={{ backgroundImage: `url(${character.image})` }} />
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04]">
+              <Portrait src={character.image} className="absolute inset-0" />
+            </div>
           </Reveal>
         </div>
 
@@ -39,8 +41,9 @@ export default function CharacterProfile({ character, others }: { character: C; 
             <div className="grid grid-cols-3 gap-3">
               {others.map((o) => (
                 <Link key={o.name} href={`/characters/${slugOf(o.name)}`} className="group">
-                  <div className="aspect-[3/4] rounded-2xl border border-white/10 bg-cover bg-center transition-transform group-hover:scale-105"
-                    style={{ backgroundImage: `url(${o.image})` }} />
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] transition-transform group-hover:scale-105">
+                    <Portrait src={o.image} className="absolute inset-0" />
+                  </div>
                   <p className="mt-2 truncate text-xs text-neutral-400 group-hover:text-gold">{o.name}</p>
                 </Link>
               ))}

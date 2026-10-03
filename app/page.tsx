@@ -6,13 +6,15 @@ import Timeline from "@/components/Timeline";
 import KnowledgeCheck from "@/components/Quiz";
 import Reveal from "@/components/Reveal";
 import { ChapterGuide, Themes, Compare, Footer } from "@/components/Extras";
+import Explore from "@/components/Explore";
 
 export default function Page() {
   return (
-    <main className="bg-black">
+    <main>
       <ProgressBar />
       <Navigation />
       <Hero />
+      <Explore />
       <RosterGrid />
       <Timeline />
       <ChapterGuide />
