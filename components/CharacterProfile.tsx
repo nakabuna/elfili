@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { characters, slugOf } from "./data";
 import Reveal from "./Reveal";
 import Portrait from "./Portrait";
@@ -8,6 +8,10 @@ import Portrait from "./Portrait";
 type C = (typeof characters)[number];
 
 export default function CharacterProfile({ character, others }: { character: C; others: C[] }) {
+  const i = characters.findIndex((c) => c.name === character.name);
+  const prev = characters[(i - 1 + characters.length) % characters.length];
+  const next = characters[(i + 1) % characters.length];
+
   return (
     <main className="mx-auto max-w-6xl px-6 py-10 md:py-16">
       <Link href="/#roster" className="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-gold">
@@ -50,6 +54,15 @@ export default function CharacterProfile({ character, others }: { character: C; 
             </div>
           </Reveal>
         </div>
+      </div>
+
+      <div className="mt-16 flex items-center justify-between gap-4">
+        <Link href={`/characters/${slugOf(prev.name)}`} className="glass inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm text-gold">
+          <ChevronLeft size={16} /> {prev.name}
+        </Link>
+        <Link href={`/characters/${slugOf(next.name)}`} className="glass inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm text-gold">
+          {next.name} <ChevronRight size={16} />
+        </Link>
       </div>
     </main>
   );
