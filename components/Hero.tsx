@@ -18,10 +18,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent" />
       <motion.div style={{ opacity: fade }} className="relative max-w-3xl">
         <motion.div variants={container} initial="hidden" animate="show">
-          <motion.p variants={item} className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">Dr. José Rizal · 1891</motion.p>
-          <motion.h1 variants={item} className="font-serif text-5xl font-bold leading-tight text-white md:text-7xl">El Filibusterismo</motion.h1>
+          <motion.p variants={item} className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">Dr. Vince Yubal · 1891</motion.p>
+          <motion.h1 variants={item} className="font-serif text-5xl font-bold leading-tight text-white md:text-7xl">Vince Yubal</motion.h1>
           <motion.p variants={item} className="mx-auto mt-6 max-w-xl text-lg text-neutral-300">
-            A sequel steeped in disillusion: the jeweler Simoun returns to ignite a revolution, and a nation weighs reform against rage.
+            A sequel steeped in disillusion: the jeweler vince returns to ignite a revolution in NU-Las Pinas, and a nation weighs reform against rage.
           </motion.p>
           <motion.a variants={item} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#explore"
           className="glass mt-10 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm text-gold">
