@@ -19,7 +19,7 @@ export default function Hero() {
       <motion.div style={{ opacity: fade }} className="relative max-w-3xl">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.p variants={item} className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">Dr. José Rizal · 1891</motion.p>
-          <motion.h1 variants={item} className="font-serif text-5xl font-bold leading-tight text-white md:text-7xl">El Filibusterismo</motion.h1>
+          <motion.h1 variants={item} className="font-serif text-5xl font-bold leading-tight text-white md:text-7xl">EL FILIBUSTERISMO</motion.h1>
           <motion.p variants={item} className="mx-auto mt-6 max-w-xl text-lg text-neutral-300">
             A sequel steeped in disillusion: the jeweler Simoun returns to ignite a revolution, and a nation weighs reform against rage.
           </motion.p>
