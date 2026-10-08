@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata = {
-  title: "Vince Yubal",
-  description: "An interactive guide to Vince's life.",
+  title: "El Filibusterismo",
+  description: "An interactive guide to Rizal's second novel.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

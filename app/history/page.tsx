@@ -1,3 +1,3 @@
 import History from "@/components/History";
-export const metadata = { title: "Historical Background · VINCE YUBAL" };
+export const metadata = { title: "Historical Background · El Filibusterismo" };
 export default function Page() { return <History />; }
